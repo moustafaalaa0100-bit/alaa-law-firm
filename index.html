@@ -67,6 +67,9 @@
     <span class="sub-name">LAW FIRM</span>
 </div>
 </div>
+<div class="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
 
         <nav>
             <ul>
@@ -389,6 +392,11 @@ document.addEventListener("click", function(e){
 >
    <i class="fa-brands fa-whatsapp"></i>
 </a>
+<script>
+document.querySelector(".menu-toggle").addEventListener("click", function(){
+    document.querySelector("nav ul").classList.toggle("active");
+});
+</script>
 
 </body>
 </html>
