@@ -33,47 +33,47 @@ body{
 }
 
 /* ===== Header ===== */
+
 header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 8%;
+    padding:15px 6%;
     background:#0f1f33;
-    position:sticky;
-    top:0;
+    position:relative;
     z-index:1000;
 }
 
-/* Logo */
 .logo{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:10px;
 }
 
 .logo-text{
     display:flex;
     flex-direction:column;
+    line-height:1.2;
 }
 
 .main-name{
-    font-family:'Cinzel', serif;
-    font-size:22px;
     color:#c9a646;
-    letter-spacing:2px;
+    font-weight:bold;
+    font-size:18px;
 }
 
 .sub-name{
+    color:white;
     font-size:12px;
-    letter-spacing:3px;
-    color:#ccc;
 }
 
-/* ===== Navbar ===== */
+/* Nav */
+
 nav ul{
-    list-style:none;
     display:flex;
     gap:25px;
+    list-style:none;
+    align-items:center;
 }
 
 nav ul li{
@@ -81,14 +81,70 @@ nav ul li{
 }
 
 nav ul li a{
+    color:white;
     text-decoration:none;
-    color:#fff;
-    font-weight:600;
+    font-weight:500;
     transition:0.3s;
 }
 
 nav ul li a:hover{
     color:#c9a646;
+}
+
+/* Toggle */
+
+.menu-toggle{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+    color:#c9a646;
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:992px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        width:100%;
+    }
+
+    nav ul{
+        position:absolute;
+        top:100%;
+        right:0;
+        width:100%;
+        background:#0f1f33;
+        flex-direction:column;
+        text-align:center;
+        padding:20px 0;
+        display:none;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    nav ul li{
+        padding:12px 0;
+    }
+
+    /* الميجا منيو تنزل تحت مش جنب */
+    .mega-menu{
+        position:static;
+        width:100%;
+        flex-direction:column;
+        box-shadow:none;
+        padding:10px 0;
+        gap:10px;
+    }
+
+    .mega-box{
+        padding:10px;
+    }
 }
 
 /* ===== Mega Menu Small & Interactive ===== */
