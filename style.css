@@ -1,0 +1,526 @@
+/* ===== Reset ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cairo', sans-serif;
+    background:#0b1624;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ===== Top Bar ===== */
+.top-bar{
+    background:#09121d;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 8%;
+    font-size:14px;
+}
+
+.top-bar a{
+    color:#ddd;
+    text-decoration:none;
+    margin-left:15px;
+}
+
+.top-bar a:hover{
+    color:#c9a646;
+}
+
+/* ===== Header ===== */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#0f1f33;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* Logo */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.main-name{
+    font-family:'Cinzel', serif;
+    font-size:22px;
+    color:#c9a646;
+    letter-spacing:2px;
+}
+
+.sub-name{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#ccc;
+}
+
+/* ===== Navbar ===== */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#c9a646;
+}
+
+/* ===== Mega Menu Small & Interactive ===== */
+
+.mega-parent{
+    position:relative;
+}
+
+.mega-menu{
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+    width:85vw;
+    max-width:850px;
+    background:#14273f;
+    padding:20px 25px;
+    display:none;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:15px;
+    border-top:3px solid #c9a646;
+    border-radius:0 0 8px 8px;
+    z-index:999;
+}
+
+.mega-menu.active{
+    display:grid;
+}
+
+/* العناصر */
+.mega-box{
+    padding:12px;
+    border-radius:6px;
+    transition:all 0.25s ease;
+    cursor:pointer;
+}
+
+.mega-box i{
+    font-size:16px;
+    color:#c9a646;
+    margin-bottom:5px;
+}
+
+.mega-box h4{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.mega-box p{
+    font-size:11px;
+    color:#ccc;
+    line-height:1.5;
+    margin-bottom:6px;
+}
+
+.mega-box a{
+    font-size:11px;
+    color:#c9a646;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* تأثير تفاعلي */
+.mega-box:hover{
+    background:#0f1f33;
+    transform:translateY(-4px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.mega-box:hover h4{
+    color:#c9a646;
+}
+
+.mega-box:hover i{
+    transform:scale(1.1);
+}
+
+/* ===== Hero ===== */
+.hero{
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1974') center/cover no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+    color:#ddd;
+}
+
+.btn{
+    background:#c9a646;
+    padding:12px 30px;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#fff;
+}
+
+/* ===== About Section ===== */
+.about{
+    background:#0f1f33;
+    padding:80px 10%;
+    text-align:center;
+}
+
+.about h2{
+    color:#c9a646;
+    font-size:38px;
+    margin-bottom:25px;
+}
+
+.about p{
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:15px;
+    color:#ddd;
+}
+
+/* ===== Stats ===== */
+.stats{
+    background:#09121d;
+    padding:80px 10%;
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.stat-box{
+    flex:1;
+    min-width:200px;
+}
+
+.stat-box h2{
+    font-size:45px;
+    color:#c9a646;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#ddd;
+    font-size:18px;
+}
+/* ===== Team Section ===== */
+.team{
+    background:#0f1f33;
+    padding:80px 10%;
+    text-align:center;
+}
+
+.team h2{
+    color:#c9a646;
+    font-size:38px;
+    margin-bottom:50px;
+}
+
+.team-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.team-box{
+    background:#14273f;
+    padding:20px;
+    width:250px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.team-box img{
+    width:100%;
+    border-radius:6px;
+    margin-bottom:15px;
+}
+
+.team-box h3{
+    margin-bottom:5px;
+}
+
+.team-box p{
+    color:#c9a646;
+    font-size:14px;
+}
+
+.team-box:hover{
+    transform:translateY(-10px);
+}
+/* ===== Blog Section ===== */
+.blog{
+    background:#09121d;
+    padding:80px 10%;
+    text-align:center;
+}
+
+.blog h2{
+    color:#c9a646;
+    font-size:38px;
+    margin-bottom:50px;
+}
+
+.blog-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.blog-box{
+    background:#14273f;
+    width:320px;
+    border-radius:8px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.blog-box img{
+    width:100%;
+    display:block;
+}
+
+.blog-content{
+    padding:20px;
+}
+
+.blog-content h3{
+    margin-bottom:10px;
+}
+
+.blog-content p{
+    font-size:14px;
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+.read-more{
+    color:#c9a646;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.blog-box:hover{
+    transform:translateY(-10px);
+}
+
+/* ===== Responsive ===== */
+@media(max-width:992px){
+
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .mega-menu{
+        position:static;
+        width:100%;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+}
+html{
+    scroll-behavior:smooth;
+}
+
+section{
+    scroll-margin-top:100px;
+}
+/* ===== Contact Section ===== */
+.contact{
+    background:#0f1f33;
+    padding:80px 10%;
+    text-align:center;
+}
+
+.contact h2{
+    color:#c9a646;
+    font-size:38px;
+    margin-bottom:50px;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-info{
+    flex:1;
+    min-width:280px;
+    text-align:right;
+}
+
+.contact-info h3{
+    margin-bottom:20px;
+    color:#c9a646;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+    color:#ddd;
+    font-size:16px;
+}
+
+.contact-info i{
+    color:#c9a646;
+    margin-left:10px;
+}
+
+.contact-form{
+    flex:1;
+    min-width:280px;
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border:none;
+    border-radius:4px;
+    background:#14273f;
+    color:#fff;
+    font-family:'Cairo', sans-serif;
+}
+
+.contact-form button{
+    background:#c9a646;
+    border:none;
+    padding:12px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:#fff;
+}
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+    text-decoration:none;
+    color:#ddd;
+    transition:0.3s ease;
+    padding:8px;
+    border-radius:6px;
+}
+
+.contact-item i{
+    color:#c9a646;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.contact-item:hover{
+    background:#14273f;
+    transform:translateX(-5px);
+    color:#fff;
+}
+
+.contact-item:hover i{
+    transform:scale(1.2);
+}
+/* ===== WhatsApp Floating Button ===== */
+
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    width:55px;
+    height:55px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    z-index:1000;
+    transition:0.3s;
+    text-decoration:none;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+    background:#1ebe5d;
+}
